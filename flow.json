@@ -1,1 +1,822 @@
-[]
+[
+    {
+        "id": "96f63e1e5ec3bc03",
+        "type": "tab",
+        "label": "Wattsense API",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "048e8a23a9f0f6fd",
+        "type": "tab",
+        "label": "MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f795e5a65ea58510",
+        "type": "tab",
+        "label": "OPC UA",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a93aac51d0a0c443",
+        "type": "tab",
+        "label": "EcoWatt & Effacement",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7bf3ad1b4d9c7ca2",
+        "type": "tab",
+        "label": "Modbus - MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "66dabf03.46121",
+        "type": "OpcUa-Endpoint",
+        "z": "f795e5a65ea58510",
+        "endpoint": "opc.tcp://localhost:53530/OPCUA/SimulationServer",
+        "login": false
+    },
+    {
+        "id": "53f4394dbf12c6b7",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://10.221.253.112:53530/OPCUA/SimulationServer",
+        "secpol": "None",
+        "secmode": "None",
+        "none": false,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "4340b56a2335c304",
+        "type": "ui_group",
+        "name": "Address Space Structure",
+        "tab": "0113eb87060106be",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0113eb87060106be",
+        "type": "ui_tab",
+        "name": "Temperatures",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0ec0e24c178892a4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f91dd7f5116e429a",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "8256e41e67e64e13a1ec3da30aa02d91.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b347bbe8383848be",
+        "type": "modbus-client",
+        "name": "FirstModbusSlave",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "10:221:253:11",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "9a2d25cdde720ea9",
+        "type": "ui_group",
+        "name": "Temperature Room 1",
+        "tab": "0113eb87060106be",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c4fd052e97040c02",
+        "type": "inject",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Demand response on",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "a8dbeca327d54ff7"
+            ]
+        ]
+    },
+    {
+        "id": "a8dbeca327d54ff7",
+        "type": "function",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Set up authentication",
+        "func": "var crypto = require('crypto');\n\nvar url = 'https://api.wattsense.com';\nvar api_key = '132BA4C2309A9E069BDF129138680F89';\nvar api_secret = 'ZTgwZTliMWJhZmQ4NmFhMmM2M2U5MjdkMTI1MzliYzFmMTYyMWZkMzcyOTIxMzRkNzA0MTQ5ZWRmY2JiMDc3Yg==';\n\nvar method = msg.method || \"GET\";\nvar path = msg.path || \"/v1/devices\";\nvar query = msg.query || null;\nvar payload = msg.payload || null;\n\nvar timestamp = Date.now();\n\nvar messageParts = [method, path];\n\nif (query) {\n    messageParts.push(encodeURIComponent(query));\n}\n\nif (payload) {\n    messageParts.push(JSON.stringify(payload));\n}\n\nmessageParts.push(timestamp);\n\nvar message = messageParts.join(\"\\n\");\n\nvar hmac_hash = crypto.createHmac('sha512', api_secret).update(message).digest('base64');\n\nmsg.headers = {\n    'X-API-Auth': api_key + ':' + hmac_hash,\n    'X-API-Timestamp': timestamp.toString()\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            [
+                "0451c09ea53312dc"
+            ]
+        ]
+    },
+    {
+        "id": "0451c09ea53312dc",
+        "type": "http request",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Get property",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.wattsense.com/v1/devices/{deviceId}/properties/{property}",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "56cde6f00f128fde"
+            ]
+        ]
+    },
+    {
+        "id": "56cde6f00f128fde",
+        "type": "function",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Extract propery value",
+        "func": "// Check if the payload key exists in the response\nif (msg.payload && typeof msg.payload.payload !== 'undefined') {\n    // Extract the payload value\n    var temperature = msg.payload.payload;\n\n    // Save the original temperature setpoint to flow context for later use\n    flow.set(\"originalSetpoint\", temperature);\n\n    // Optionally set the temperature as the msg.payload for the next nodes\n    msg.payload = temperature;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "12d81bb17bc3be49"
+            ]
+        ]
+    },
+    {
+        "id": "5720ac9e5cfb7043",
+        "type": "http request",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Update setpoint",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.wattsense.com/v1/devices/{deviceId}/properties/{property}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1260,
+        "y": 260,
+        "wires": [
+            [
+                "cd8de1b8f6f4a451"
+            ]
+        ]
+    },
+    {
+        "id": "c43b36e29fcabf8d",
+        "type": "inject",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Demand response off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 340,
+        "wires": [
+            [
+                "dab8c18ab9f73cc7"
+            ]
+        ]
+    },
+    {
+        "id": "dab8c18ab9f73cc7",
+        "type": "function",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Set up authentication & setpoint",
+        "func": "var crypto = require('crypto');\n\nvar url = 'https://api.wattsense.com';\nvar api_key = '132BA4C2309A9E069BDF129138680F89';\nvar api_secret = 'ZTgwZTliMWJhZmQ4NmFhMmM2M2U5MjdkMTI1MzliYzFmMTYyMWZkMzcyOTIxMzRkNzA0MTQ5ZWRmY2JiMDc3Yg==';\n\nvar method = msg.method || \"GET\";\nvar path = msg.path || \"/v1/devices\";\nvar query = msg.query || null;\nvar payload = msg.payload || null;\n\nvar timestamp = Date.now();\n\nvar messageParts = [method, path];\n\nif (query) {\n    messageParts.push(encodeURIComponent(query));\n}\n\nif (payload) {\n    messageParts.push(JSON.stringify(payload));\n}\n\nmessageParts.push(timestamp);\n\nvar message = messageParts.join(\"\\n\");\n\nvar hmac_hash = crypto.createHmac('sha512', api_secret).update(message).digest('base64');\n\nmsg.headers = {\n    'X-API-Auth': api_key + ':' + hmac_hash,\n    'X-API-Timestamp': timestamp.toString()\n};\n\nmsg.property = flow.get(\"originalSetpoint\");\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "25b309c80b6dd53d"
+            ]
+        ]
+    },
+    {
+        "id": "25b309c80b6dd53d",
+        "type": "http request",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Update setpoint",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.wattsense.com/v1/devices/{deviceId}/properties/{property}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 740,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12d81bb17bc3be49",
+        "type": "function",
+        "z": "96f63e1e5ec3bc03",
+        "name": "Change property value",
+        "func": "var crypto = require('crypto');\n\nvar url = 'https://api.wattsense.com';\nvar api_key = '132BA4C2309A9E069BDF129138680F89';\nvar api_secret = 'ZTgwZTliMWJhZmQ4NmFhMmM2M2U5MjdkMTI1MzliYzFmMTYyMWZkMzcyOTIxMzRkNzA0MTQ5ZWRmY2JiMDc3Yg==';\n\nvar method = \"PUT\"\nvar path = msg.path || \"/v1/devices\";\nvar query = msg.query || null;\nvar payload = msg.payload || null;\n\nvar timestamp = Date.now();\n\nvar messageParts = [method, path];\n\nif (query) {\n    messageParts.push(encodeURIComponent(query));\n}\n\nif (payload) {\n    messageParts.push(JSON.stringify(payload));\n}\n\nmessageParts.push(timestamp);\n\nvar message = messageParts.join(\"\\n\");\n\nvar hmac_hash = crypto.createHmac('sha512', api_secret).update(message).digest('base64');\n\nmsg.headers = {\n    'X-API-Auth': api_key + ':' + hmac_hash,\n    'X-API-Timestamp': timestamp.toString()\n};\n\n\n// Get the original setpoint from the previous node (or from flow context if stored there)\nvar originalSetpoint = msg.payload;\n\n// Deduct 2 degrees (or whatever your desired logic is)\nvar newSetpoint = originalSetpoint - 2;\n\n// Set the new setpoint as the msg payload for the next nodes\nmsg.payload = {\n    \"payload\": newSetpoint\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 260,
+        "wires": [
+            [
+                "5720ac9e5cfb7043"
+            ]
+        ]
+    },
+    {
+        "id": "cd8de1b8f6f4a451",
+        "type": "debug",
+        "z": "96f63e1e5ec3bc03",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "839ae7a330594d9d",
+        "type": "inject",
+        "z": "048e8a23a9f0f6fd",
+        "name": "On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "4bf4022ad6503335"
+            ]
+        ]
+    },
+    {
+        "id": "4bf4022ad6503335",
+        "type": "mqtt out",
+        "z": "048e8a23a9f0f6fd",
+        "name": "LED",
+        "topic": "LED",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f91dd7f5116e429a",
+        "x": 430,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "29fa2e402b0327a4",
+        "type": "inject",
+        "z": "048e8a23a9f0f6fd",
+        "name": "Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "4bf4022ad6503335"
+            ]
+        ]
+    },
+    {
+        "id": "bd61866095100a25",
+        "type": "inject",
+        "z": "f795e5a65ea58510",
+        "name": "Read",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "e68df89509a12195"
+            ]
+        ]
+    },
+    {
+        "id": "e68df89509a12195",
+        "type": "OpcUa-Item",
+        "z": "f795e5a65ea58510",
+        "item": "ns=6;s=MyLevel",
+        "datatype": "",
+        "value": "",
+        "name": "MyDevice",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69d3270abc8dd2a2",
+        "type": "debug",
+        "z": "f795e5a65ea58510",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "bf26c5c282f6cf51",
+        "type": "ecowatt",
+        "z": "a93aac51d0a0c443",
+        "name": "API EcoWatt",
+        "ostr": "ZDlkYmI2MDktMDUyOS00ZTlmLTg2ZGQtZjMzMTkxZjhjNGU0OjZjNDU2ZGQxLWJiZTEtNDc0YS1hYzYxLWRiYmI5MjE2YTBkYQ==",
+        "sandbox": false,
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "ca80085d4a2fee8c"
+            ]
+        ]
+    },
+    {
+        "id": "a694ac633d48c8d0",
+        "type": "inject",
+        "z": "a93aac51d0a0c443",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "bf26c5c282f6cf51"
+            ]
+        ]
+    },
+    {
+        "id": "ca80085d4a2fee8c",
+        "type": "debug",
+        "z": "a93aac51d0a0c443",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3121efbe5117d12a",
+        "type": "effacement",
+        "z": "a93aac51d0a0c443",
+        "name": "",
+        "ostr": "ZDlkYmI2MDktMDUyOS00ZTlmLTg2ZGQtZjMzMTkxZjhjNGU0OjZjNDU2ZGQxLWJiZTEtNDc0YS1hYzYxLWRiYmI5MjE2YTBkYQ==",
+        "sandbox": true,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "321e05af50e6b54d"
+            ]
+        ]
+    },
+    {
+        "id": "5f2a31a1fd4d647c",
+        "type": "inject",
+        "z": "a93aac51d0a0c443",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "3121efbe5117d12a"
+            ]
+        ]
+    },
+    {
+        "id": "321e05af50e6b54d",
+        "type": "debug",
+        "z": "a93aac51d0a0c443",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "353371d732567d43",
+        "type": "ui_chart",
+        "z": "7bf3ad1b4d9c7ca2",
+        "name": "Temperature Room 1",
+        "group": "9a2d25cdde720ea9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Room 1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "300",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 860,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc334e33aab22ddc",
+        "type": "function",
+        "z": "7bf3ad1b4d9c7ca2",
+        "name": "Return Temperature",
+        "func": "msg.payload = msg.payload[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "353371d732567d43",
+                "2bef10fcd6aaf1da"
+            ]
+        ]
+    },
+    {
+        "id": "2bef10fcd6aaf1da",
+        "type": "debug",
+        "z": "7bf3ad1b4d9c7ca2",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4b8785598e326307",
+        "type": "mqtt in",
+        "z": "7bf3ad1b4d9c7ca2",
+        "name": "Temperature Room 1",
+        "topic": "Temperature/Room1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f91dd7f5116e429a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "bc334e33aab22ddc"
+            ]
+        ]
+    }
+]
